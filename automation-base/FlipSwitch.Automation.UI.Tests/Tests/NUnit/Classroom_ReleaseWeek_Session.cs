@@ -26,6 +26,7 @@ namespace FlipSwitch.Automation.UI.Tests.Tests.NUnit
                 .ClickClassRoom()
                 .ClickLaunch();
             Assert.IsTrue(LMSClassSessionPage.PageIsDisplayed());
+
         }
     }
 }

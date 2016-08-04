@@ -36,6 +36,18 @@ namespace FlipSwitch.Pages.LMSPages
             WaitUtils.WaitForElementClickable(divClassRoom).Click();
             return new LMSClassRoomPage();
         }
+        
+        public dynamic NavigateTo(string navItem)
+        {
+            switch (navItem)
+            {
+                case "classroom":
+                    return ClickClassRoom();
+                default:
+                    break;
+            }
+            return null;
+        }
 
         public override bool PageIsDisplayed()
         {

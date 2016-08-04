@@ -28,7 +28,7 @@ namespace automation_base
         {
             threadDriver = new ThreadLocal<IWebDriver>(() =>
             {
-                return new ChromeDriver(String.Format("{0}\\{1}\\", Environment.CurrentDirectory, "Drivers"));
+                return new ChromeDriver("C:/Temp/");
                 //return new FirefoxDriver();
                 //return new PhantomJSDriver(String.Format("{0}\\{1}\\", Environment.CurrentDirectory, "Drivers"));
             }, true);

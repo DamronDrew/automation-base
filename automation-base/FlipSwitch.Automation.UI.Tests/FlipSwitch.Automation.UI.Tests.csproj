@@ -57,9 +57,7 @@
     <Compile Include="Tests\NUnit\Classroom_ReleaseWeek_Session.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Tests\SpecFlow\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\automation-base\automation-base.csproj">
       <Project>{90C5A56B-135C-4CE0-BE3A-0F8A89BE4868}</Project>

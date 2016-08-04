@@ -27,7 +27,7 @@ namespace FlipSwitch.Pages.LMSPages
         #region Elements
 
         [FindsBy(How = How.ClassName, Using = "btn-launch")]
-        private IWebElement btnLaunch;
+        private IList<IWebElement> btnLaunch;
 
         #endregion
 
@@ -40,7 +40,7 @@ namespace FlipSwitch.Pages.LMSPages
 
         public LMSClassSessionPage ClickLaunch()
         {
-            WaitUtils.WaitForElementClickable(btnLaunch).Click();
+            WaitUtils.WaitForElementClickable(btnLaunch.FirstOrDefault()).Click();
             TabUtils.SwitchToTab("Flipswitch Virtual Classroom - Index");
             return new LMSClassSessionPage();
         }

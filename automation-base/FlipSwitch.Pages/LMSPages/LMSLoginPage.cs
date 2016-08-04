@@ -56,6 +56,13 @@ namespace FlipSwitch.Pages.LMSPages
             return new LMSLeftMainNavPage();
         }
 
+        public void LogIn(string userName, string password)
+        {
+            EnterUserName(userName);
+            EnterPassword(password);
+            ClickLogin();
+        }
+
         public override bool PageIsDisplayed()
         {
             throw new NotImplementedException();

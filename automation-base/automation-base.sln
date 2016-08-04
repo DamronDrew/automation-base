@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlipSwitch.Automation.UI.Te
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlipSwitch.Pages", "FlipSwitch.Pages\FlipSwitch.Pages.csproj", "{512B1FC6-94F2-4750-867B-231E24A998E2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlipSwitch.Automation.SpecFlow.UI.Tests", "FlipSwitch.Automation.SpecFlow.UI.Tests\FlipSwitch.Automation.SpecFlow.UI.Tests.csproj", "{B544B5EB-857A-42D0-B569-D4C2A3B1A303}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{512B1FC6-94F2-4750-867B-231E24A998E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{512B1FC6-94F2-4750-867B-231E24A998E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{512B1FC6-94F2-4750-867B-231E24A998E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B544B5EB-857A-42D0-B569-D4C2A3B1A303}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B544B5EB-857A-42D0-B569-D4C2A3B1A303}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B544B5EB-857A-42D0-B569-D4C2A3B1A303}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B544B5EB-857A-42D0-B569-D4C2A3B1A303}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
