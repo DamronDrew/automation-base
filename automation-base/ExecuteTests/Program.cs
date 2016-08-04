@@ -11,7 +11,7 @@ namespace ExecuteTests
     {
         static void Main(string[] args)
         {
-            WebDriverBase.CreateDriver();
+            WebDriverBase.CreateDriver("chrome");
             WebDriverBase.NavigateTo("");
         }
     }

@@ -24,17 +24,21 @@ namespace automation_base
             return threadDriver.Value;
         }
 
-        public static void CreateDriver()
+        public static void CreateDriver(String url)
         {
             threadDriver = new ThreadLocal<IWebDriver>(() =>
             {
-                return new ChromeDriver(String.Format("{0}\\{1}\\", Environment.CurrentDirectory, "Drivers", "chromedriver.exe"));
+                return new ChromeDriver(String.Format("{0}\\{1}\\", Environment.CurrentDirectory, "Drivers"));
+                //return new FirefoxDriver();
+                //return new PhantomJSDriver(String.Format("{0}\\{1}\\", Environment.CurrentDirectory, "Drivers"));
             }, true);
+            NavigateTo(url);
+            GetWebDriver().Manage().Window.Maximize();
         }
 
         public static void NavigateTo(String url)
         {
-            GetWebDriver().Navigate().GoToUrl("https://www.google.com/");
+            GetWebDriver().Navigate().GoToUrl(url);
         }
     }
 }
