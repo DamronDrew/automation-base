@@ -12,14 +12,12 @@ namespace FlipSwitch.Pages.LMSPages
 {
     public class LMSClassRoomPage : PageBase
     {
-        string frameId = "ClassRoomFrame";
-
         #region Ctor
 
         public LMSClassRoomPage()
             : base()
         {
-            switchToClassFrame();
+            PageIsDisplayed();
         }
 
         #endregion
@@ -28,15 +26,10 @@ namespace FlipSwitch.Pages.LMSPages
 
         [FindsBy(How = How.ClassName, Using = "btn-launch")]
         private IList<IWebElement> btnLaunch;
-
+        
         #endregion
 
         #region Methods
-
-        private void switchToClassFrame()
-        {
-            FrameUtils.SwitchToFrame(frameId);
-        }
 
         public LMSClassSessionPage ClickLaunch()
         {
@@ -47,7 +40,8 @@ namespace FlipSwitch.Pages.LMSPages
 
         public override bool PageIsDisplayed()
         {
-            throw new NotImplementedException();
+            FrameUtils.SwitchToFrame(By.Id("ClassRoomFrame"));
+            return true;
         }
 
         #endregion

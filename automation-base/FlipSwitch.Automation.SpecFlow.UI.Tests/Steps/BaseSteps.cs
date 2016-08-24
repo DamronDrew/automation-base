@@ -21,7 +21,7 @@ namespace FlipSwitch.Automation.SpecFlow.UI.Tests.Steps
         [BeforeFeature]
         public static void BeforeFeature()
         {
-            WebDriverBase.CreateDriver("https://devflms.flipswitch.com/");
+            WebDriverBase.CreateDriver("https://devflms.flipswitch.com/", "Chrome");
         }
 
         [AfterFeature]

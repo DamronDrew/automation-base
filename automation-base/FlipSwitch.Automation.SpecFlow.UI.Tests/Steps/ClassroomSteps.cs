@@ -10,10 +10,6 @@ namespace FlipSwitch.Automation.SpecFlow.UI.Tests.Steps
     [Binding]
     public sealed class ClassroomSteps
     {
-        [When(@"I launch the session")]
-        public void WhenILaunchTheSession()
-        {
-            new LMSClassRoomPage().ClickLaunch();
-        }
+        
     }
 }

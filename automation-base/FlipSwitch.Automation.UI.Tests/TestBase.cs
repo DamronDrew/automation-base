@@ -13,7 +13,7 @@ namespace FlipSwitch.Automation.UI.Tests
         [TestInitialize()]
         public void setupTest()
         {
-            WebDriverBase.CreateDriver("https://devflms.flipswitch.com/");
+            WebDriverBase.CreateDriver("https://devflms.flipswitch.com/", "Chrome");
         }
 
         [TestCleanup()]

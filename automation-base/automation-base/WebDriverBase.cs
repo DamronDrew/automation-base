@@ -1,6 +1,7 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.PhantomJS;
+using OpenQA.Selenium.Remote;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,16 +25,26 @@ namespace automation_base
             return threadDriver.Value;
         }
 
-        public static void CreateDriver(String url)
+        public static void CreateDriver(String url, String browser)
         {
-            threadDriver = new ThreadLocal<IWebDriver>(() =>
+            DesiredCapabilities capabilities;
+            switch (browser)
             {
-                return new ChromeDriver("C:/Temp/");
-                //return new FirefoxDriver();
-                //return new PhantomJSDriver(String.Format("{0}\\{1}\\", Environment.CurrentDirectory, "Drivers"));
-            }, true);
+                case "Chrome":
+                    capabilities = DesiredCapabilities.Chrome();
+                    capabilities.SetCapability("platform", "WINDOWS");
+                    ChromeOptions options = new ChromeOptions();
+                    options.AddArguments("start-maximized");
+                    capabilities.SetCapability(ChromeOptions.Capability, options);
+                    threadDriver = new ThreadLocal<IWebDriver>(() =>
+                    {
+                        return new ChromeDriver("C:/Temp/", options);
+                    }, true);
+                    break;
+                default:
+                    break;
+            }
             NavigateTo(url);
-            GetWebDriver().Manage().Window.Maximize();
         }
 
         public static void NavigateTo(String url)

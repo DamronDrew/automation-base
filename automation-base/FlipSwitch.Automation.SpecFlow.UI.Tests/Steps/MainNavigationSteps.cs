@@ -10,10 +10,18 @@ namespace FlipSwitch.Automation.SpecFlow.UI.Tests.Steps
     [Binding]
     public sealed class MainNavigationSteps
     {
+        LMSClassRoomPage classRoom = null;
+
         [Given(@"I have clicked on the ""(.*)"" navigation item")]
         public void GivenIHaveClickedOnTheNavigationItem(string navItem)
         {
-            new LMSLeftMainNavPage().NavigateTo(navItem);
+            classRoom = new LMSLeftMainNavPage().NavigateTo(navItem);
+        }
+
+        [When(@"I launch the session")]
+        public void WhenILaunchTheSession()
+        {
+            classRoom.ClickLaunch();
         }
     }
 }
